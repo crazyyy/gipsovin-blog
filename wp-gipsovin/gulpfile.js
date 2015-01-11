@@ -3,6 +3,7 @@ var     gulp        =   require('gulp'),
         gutil       =   require('gulp-util'),
         imageop     =   require('gulp-image-optimization'),
         gulpif      =   require('gulp-if');
+        livereload  =   require('gulp-livereload');
 
 var     devStatus   =   true;
 
@@ -33,6 +34,7 @@ gulp.task('style', function() {
         }))
         .pipe($.autoprefixer('last 2 version', '> 5%', 'ie 8', {map: false}))
         .pipe(gulp.dest(destSass))
+        .pipe(livereload())
         .pipe($.size());
 });
 
@@ -47,13 +49,15 @@ gulp.task('images', function(cb) {
         })
     ))
     .pipe(gulp.dest(destImg))
+    .pipe(livereload())
     .on('end', cb)
     .on('error', cb)
-    .pipe($.size())
+    .pipe($.size());
 });
 
 
 gulp.task('watch', function () {
+    livereload.listen();
     gulp.watch(sorcSass, ['style']);
     gulp.watch(sorcImg, ['images']);
 });
