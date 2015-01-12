@@ -42,16 +42,14 @@
         <div class="inner">
             <!-- logo -->
             <div class="logo">
-                <?php if ( is_front_page() && is_home() ){ } else { ?>
-                <a href="<?php echo home_url(); ?>">
-                <?php  } ?>
-                <!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-                <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">   
-                <?php if ( is_front_page() && is_home() ){ 
-                } else { ?>
-                </a>
+                <?php if ( is_front_page() || is_home() ) { ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
+                <? } else { ?>
+                    <a href="<?php echo home_url(); ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/logo-color.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
+                    </a>          
                 <?php } ?>
-            </div>
+            </div><!-- logo -->
             <!-- /logo -->
             <h1 class="site-title"><?php bloginfo( 'name' ); ?>гипсовиниловые панели</h1>
 

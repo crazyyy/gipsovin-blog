@@ -7,8 +7,8 @@
                 <p>Наши телефоны постоянно доступны для консультаций</p>
             </div>
             <!-- /.footer-phone-block -->
-            <form action="">
-                <input type="text" placeholder="Искать...">
+            <form method="get" name="searchform" action="<?php bloginfo('url'); ?>/">
+                <input type="text" name="s" placeholder="Искать...">
                 <button type="submit"></button>
             </form>
             <?php wpeFootNav(); ?>
@@ -18,7 +18,8 @@
 <div class="home-back" ></div>
 <?php wp_footer(); ?>
 <script>
-	$(".home-back").backstretch("<?php echo get_template_directory_uri(); ?>/img/home-slide.jpg");
+    $(".home-back").backstretch("<?php echo get_template_directory_uri(); ?>/img/home-slide.jpg");
+	$(".custom-article-home").backstretch("<?php echo get_template_directory_uri(); ?>/img/custom-article-home.jpg");
 </script>
 </body>
 </html>
