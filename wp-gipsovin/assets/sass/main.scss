@@ -89,7 +89,20 @@ h5,
 h6 {
    margin: 0;
 }
+/* clearfix */
+.clearfix:before {
+  display: table;
+  content: ""; }
+.clearfix:after {
+  display: table;
+  content: "";
+  clear: both; }
 
+.clear {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
 /* ==============
  * Styling
 /* ============== */
@@ -213,7 +226,7 @@ header {
   height: 590px;
   position: absolute;
   top: 0;
-  /* z-index: -5; */
+  z-index: -5;
 }
 /* ==============
  * Middle
@@ -224,8 +237,101 @@ header {
 section {
   width: 960px;
   margin: 0 auto;
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 40px;
+  }
+  p {
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0 0 30px;
+  }
+}
+.question {
+  background-image: url(../img/bg/question.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  width: 170px;
+  display: block;
+  margin: 0 auto;
+  font-size: 14px;
+  padding: 14px 56px 14px 0;
+  text-decoration: none;
+  color: #fff;
+  font-weight: lighter;
+  &:hover {
+    text-decoration: underline;
+    background-image: url(../img/bg/question-hover.png);
+  }
 }
 
+.home-slider {
+  height: 295px;
+  padding: 110px 0 0;
+  h2 {
+    font-size: 60px;
+    font-weight: lighter;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0 auto 40px;
+  }
+  h5 {
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin: 0 0 55px;
+  }
+}
+.home-fourblock {
+  margin: 0 auto 60px;
+  ul {
+    li {
+      box-shadow: 0px 1px 3px 0px rgba(35, 31, 32, 0.4);
+      background-color: #fff;
+      display: inline-block;
+      width: 190px;
+      height: 340px;
+      padding: 40px 15px 0;
+      margin: 0 10px;
+      float: left;
+      
+      background-repeat: no-repeat;
+      background-position: center 90px;
+      &:first-child {
+        background-image: url(../img/bg/home-fourblock-1.png);
+      }
+      &:nth-child(2) {
+        background-image: url(../img/bg/home-fourblock-2.png);
+      }
+      &:nth-child(3) {
+        background-image: url(../img/bg/home-fourblock-3.png);
+      }
+      &:last-child {
+        background-image: url(../img/bg/home-fourblock-4.png);
+      }
+      h6 {
+        text-align: center;
+        margin: 0 0 150px;
+        color: #000;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      p {
+        font-size: 14px;
+        color: #000;
+        text-align: center;
+        line-height: 1.286;
+      }
+    }
+  }
+}
 
 
 /* ==============

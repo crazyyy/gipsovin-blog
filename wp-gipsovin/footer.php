@@ -18,8 +18,7 @@
 <div class="home-back" ></div>
 <?php wp_footer(); ?>
 <script>
-	$(".home-back").backstretch("http://dl.dropbox.com/u/515046/www/garfield-interior.jpg");
-
+	$(".home-back").backstretch("<?php echo get_template_directory_uri(); ?>/img/home-slide.jpg");
 </script>
 </body>
 </html>
