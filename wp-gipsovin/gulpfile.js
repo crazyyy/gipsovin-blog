@@ -28,11 +28,11 @@ else {
 
 gulp.task('style', function() { 
     return gulp.src(sorcSass)
-        .pipe($.sass({
-            errLogToConsole: true,
-            outputStyle: sassStyle  
+        .pipe($.rubySass({
+            debugInfo: true,
+            style: sassStyle  
         }))
-        .pipe($.autoprefixer('last 2 version', '> 5%', 'ie 8', {map: false}))
+/*        .pipe($.autoprefixer('last 4 version', '> 5%', 'ie 8', {map: false})) */
         .pipe(gulp.dest(destSass))
         .pipe(livereload())
         .pipe($.size());

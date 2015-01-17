@@ -405,7 +405,8 @@ section {
   }
 }
 article {
-  .page-title {
+  .page-title,
+  .single-title {
     font-size: 18px;
     color: #000;
     line-height: 1;
