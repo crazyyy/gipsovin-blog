@@ -19,7 +19,8 @@
 <?php wp_footer(); ?>
 <script>
     $(".home-back").backstretch("<?php echo get_template_directory_uri(); ?>/img/home-slide.jpg");
-	$(".custom-article-home").backstretch("<?php echo get_template_directory_uri(); ?>/img/custom-article-home.jpg");
+    $(".custom-article-home").backstretch("<?php echo get_template_directory_uri(); ?>/img/custom-article-home.jpg");
+	$(".custom-article-category").backstretch("<?php echo get_template_directory_uri(); ?>/img/custom-article-category.jpg");
 </script>
 </body>
 </html>
