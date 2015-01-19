@@ -20,7 +20,8 @@
 <script>
     $(".home-back").backstretch("<?php echo get_template_directory_uri(); ?>/img/home-slide.jpg");
     $(".custom-article-home").backstretch("<?php echo get_template_directory_uri(); ?>/img/custom-article-home.jpg");
-	$(".custom-article-category").backstretch("<?php echo get_template_directory_uri(); ?>/img/custom-article-category.jpg");
+    $(".custom-article-category").backstretch("<?php echo get_template_directory_uri(); ?>/img/custom-article-category.jpg");
+	$(".custom-article-product").backstretch("<?php echo get_template_directory_uri(); ?>/img/custom-article-product.jpg");
 </script>
 </body>
 </html>

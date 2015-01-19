@@ -797,4 +797,8 @@ function top_level_cats_remove_cat_base($link)
 	return preg_replace('|' . $category_base . '|', '', $link, 1);
 }
 
+$type_computer_part = new Super_Custom_Post_Type( 'production' );
+$type_computer_part->set_icon( 'shopping-cart' );
+
+
 ?>
