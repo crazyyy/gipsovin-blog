@@ -256,11 +256,20 @@ section {
    width: 820px;
    padding: 0 70px 40px;
    margin: 0 auto;
-   .title {
+   .title,
+   .page-title,
+   .single-title {
       font-size: 18px;
       font-weight: 700;
       text-align: center;
       margin: 0 0 40px;
+      color: #000;
+      line-height: 1;  
+   }
+   .page-title,
+   .single-title {
+       padding: 10px 260px 0 20px;
+       text-align: left;
    }
    p {
       font-weight: normal;
@@ -318,6 +327,10 @@ section {
    text-decoration: none;
    margin: 0 auto 30px;
    line-height: 2.5;
+   transition: all 0.5;
+   &:hover {
+      background-color: #ea5654;
+   }
 }
 
 .home-slider {
@@ -405,14 +418,127 @@ section {
   }
 }
 article {
-  .page-title,
-  .single-title {
-    font-size: 18px;
-    color: #000;
-    line-height: 1;
-    padding: 10px 260px 0 20px;
-    margin: 0 0 4px;
-  }
+   ol, 
+   ul {
+      margin: 0 0 30px;
+      padding: 0 0 0 30px;
+      li {
+         margin: 0 0 10px;
+      }
+   }
+   ul {
+      list-style: circle outside;
+   }
+   ol {
+      list-style: decimal outside; 
+   }
+   blockquote {
+      color: #cc3366;
+   }
+   .tags {
+      margin-left: -70px;
+      float: left;
+      display: inline-block;
+      a {
+         text-decoration: none;
+         font-weight: lighter;
+         color: #0b5bff;
+         &:before {
+            content: '#';
+         }
+      }
+   }
+   .date {
+      float: right;
+      display: inline-block;
+      margin-right: -70px;
+      text-transform: lowercase;
+      font-weight: lighter;
+   }
+}
+article.post {
+   margin-bottom: 70px;
+}
+.relative-article {
+   width: 960px;
+   margin: 0 -70px 70px -70px;
+   .relative-block-title {
+      width: 100%;
+      float: left;
+      text-align: center;
+      margin: 0 0 40px;
+      font-size: 30px;
+      margin: 0 0 40px;
+      color: #000000;
+      text-transform: uppercase;
+   }
+   .container {
+      float: left;
+      height: 325px;
+      width: 460px;
+      margin: 0 10px;
+      overflow: hidden;
+      .container-title {
+         color: #000000;
+         margin: 0 0 36px;
+         text-align: center;
+         font-size: 18px;
+      }
+      .relative-feature-image {
+         width: 460px;
+         height: 145px;
+         position: relative;
+         display: block;
+         margin: 0 0 40px;
+         img {
+            width: 100%;
+            height: 145px;
+         }
+         .show-more {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 5;
+            margin: 0;
+         }
+      }
+   }
+}
+.contact-map {
+   .acf-map {
+      width: 100%;
+      height: 200px;
+   }
+   .marker-in {
+      width: 300px;
+      height: 90px;
+      border: 2px solid #fff;
+      padding: 0;
+      p {
+         width: 165px;
+         float: left;
+         display: block;
+         color: #000000;
+         font-size: 14px;
+         text-align: right;
+      }
+      .adress {
+         
+      }
+      .worktime {
+
+      }
+      .location-img {
+         display: block;
+         width: 130px;
+         height: 90px;
+         float: right;
+         img {
+            width: 130px;
+            height: 90px;
+         }
+      }
+   }
 }
 
 /* ==============

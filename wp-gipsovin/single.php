@@ -10,15 +10,14 @@
 			
 			<?php the_content(); ?>
 
-			<span class="date"><?php the_time('d F Y'); ?> <?php the_time('H:i'); ?></span>
-			
-			<?php the_tags( __( 'Tags: ', 'wpeasy' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
-			
+			<span class="tags"><?php the_tags( '', ' ', '<br />' ); ?></span>
+			<span class="date"><?php the_time('d F Y'); ?></span>
 			<?php endwhile; else: ?>
 				<h2 class="page-title inner-title"><?php _e( 'Sorry, nothing to display.', 'wpeasy' ); ?></h2>
 			<?php endif; ?>	
 		</article>
 		<!-- /article -->
+		<?php get_template_part('relative-article'); ?>
 	</section>
 	<!-- /section -->
 <?php get_footer(); ?>
