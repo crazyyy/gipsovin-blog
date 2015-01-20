@@ -11,7 +11,7 @@
 	
 	<!-- section -->
 	<section role="main" class="category-block">
-
+		<?php get_template_part('search-include'); ?>
 		<div class="loop-block clearfix">
 			
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
