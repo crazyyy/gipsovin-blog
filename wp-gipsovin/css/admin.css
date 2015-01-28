@@ -1,9 +1,9 @@
 /* change style default editor */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Windows\/TEMP\/gulp-ruby-sass\/admin\.scss}line{font-family:\000033}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/CRAZY_\~1\/AppData\/Local\/Temp\/gulp-ruby-sass\/admin\.scss}line{font-family:\000033}}
 #editorcontainer textarea#content { font-size: 16px; font-family: Georgia, "Times New Roman", Times, serif; color: #333; }
 
 /* hide user with id2 from users menu */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Windows\/TEMP\/gulp-ruby-sass\/admin\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/CRAZY_\~1\/AppData\/Local\/Temp\/gulp-ruby-sass\/admin\.scss}line{font-family:\0000311}}
 #user-2 { display: none; }
 
 /*# sourceMappingURL=admin.css.map */

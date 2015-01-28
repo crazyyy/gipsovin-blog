@@ -1,5 +1,5 @@
 <?php /* Template Name: Home Page Template */ get_header(); ?>
-	
+
 	<aside class="inner home-slider">
 		<h2>современный интерьер</h2>
 		<h5>новейшие МАТЕРИАЛЫ</h5>
@@ -11,7 +11,7 @@
 
 	<?php if( have_rows('head-four-blocks') ): ?>
 		<ul class="clearfix">
-		<?php while( have_rows('head-four-blocks') ): the_row(); 
+		<?php while( have_rows('head-four-blocks') ): the_row();
 
 			// vars
 			$title = get_sub_field('block-title');
@@ -54,11 +54,11 @@
 	<!-- /section -->
 
 	<div class="full-width custom-article-home">
-		<aside class="inner">
-			<h2>Монтаж панелей по «сухой» технологии</h2>
-			<p>избавляет от грязи в помещении и экономит время</p>
-			<a href="" class="arrow-next">Профиль для монтажа</a>
-		</aside>
+    <aside class="inner">
+      <h2><?php the_field('ad-title'); ?></h2>
+      <p><?php the_field('ad-content'); ?></p>
+      <a href="<?php the_field('ad-link'); ?>" class="arrow-next"><?php the_field('ad-link-href'); ?></a>
+    </aside>
 	</div><!-- full-width custom-article-home -->
 
 	<section>

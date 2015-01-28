@@ -1,7 +1,7 @@
 <?php
 /*
  *  Author: knaipa | @Saitobaza
- *  URL: saitobaza.ru 
+ *  URL: saitobaza.ru
  *  Custom functions, support, custom post types and more.
  */
 
@@ -24,7 +24,7 @@ function catchFirstImage() {
     $post->post_content, $matches);
     $first_img = $matches [1] [0];
 //  If post dont have an image - display image "noimage"
-//  RU: Если запись не содержит изображения - показывать картинку "noimage" 
+//  RU: Если запись не содержит изображения - показывать картинку "noimage"
     if(empty($first_img)){
     $first_img = get_template_directory_uri() . '/img/noimage.jpg'; }
     return $first_img;
@@ -55,7 +55,7 @@ function wpeHeaderScripts()
     if (!is_admin()) {
 //  Load header scripts (header.php)
 //  RU: Подключение скриптов в шапку (header.php)
-        wp_deregister_script('jquery'); // Deregister WordPress jQuery   RU: Отключаю стандартный JQuery WordPress'а  
+        wp_deregister_script('jquery'); // Deregister WordPress jQuery   RU: Отключаю стандартный JQuery WordPress'а
         wp_register_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js', array(), '1.11.0'); // Google CDN jQuery   RU: Регистрирую JQuery с хостинга Google
         wp_enqueue_script('jquery'); // Enqueue it!    RU: Подключаю его
         wp_register_script('conditionizr', 'http://cdnjs.cloudflare.com/ajax/libs/conditionizr.js/2.2.0/conditionizr.min.js', array(), '2.2.0', false); // Conditionizr
@@ -65,7 +65,7 @@ function wpeHeaderScripts()
 //  RU: Подключение скриптов в подвал (footer.php)
         wp_register_script('modernizr', 'http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js', array(), '2.6.2', true); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
-        
+
         wp_register_script('wpeScripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true); // Custom scripts
         wp_enqueue_script('wpeScripts'); // Enqueue it!
     }
@@ -134,7 +134,7 @@ if (function_exists('add_theme_support'))
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     //  RU: Добавление поддержки темой собственного фона - цвета или зображения. Раскоментируйте, что бы работало
     // http://wp-kama.ru/function/add_theme_support#h3_3
-    /* 
+    /*
     add_theme_support('custom-background', array(
 	'default-color' => 'ccc',
 	'default-image' => get_template_directory_uri() . '/img/bg.jpg'
@@ -174,11 +174,11 @@ function wpeHeadNav()
 	wp_nav_menu(
 	array(
 		'theme_location'  => 'header-menu',
-		'menu'            => '', 
-		'container'       => 'div', 
-		'container_class' => 'menu-{menu slug}-container', 
+		'menu'            => '',
+		'container'       => 'div',
+		'container_class' => 'menu-{menu slug}-container',
 		'container_id'    => '',
-		'menu_class'      => 'menu', 
+		'menu_class'      => 'menu',
 		'menu_id'         => '',
 		'echo'            => true,
 		'fallback_cb'     => 'wp_page_menu',
@@ -197,11 +197,11 @@ function wpeFootNav() {
 	wp_nav_menu(
 	array(
 		'theme_location'  => 'footer-menu',
-		'menu'            => '', 
-		'container'       => 'div', 
-		'container_class' => 'menu-{menu slug}-container', 
+		'menu'            => '',
+		'container'       => 'div',
+		'container_class' => 'menu-{menu slug}-container',
 		'container_id'    => '',
-		'menu_class'      => 'menu', 
+		'menu_class'      => 'menu',
 		'menu_id'         => '',
 		'echo'            => true,
 		'fallback_cb'     => 'wp_page_menu',
@@ -220,11 +220,11 @@ function wpeSideNav() {
 	wp_nav_menu(
 	array(
 		'theme_location'  => 'sidebar-menu',
-		'menu'            => '', 
-		'container'       => 'div', 
-		'container_class' => 'menu-{menu slug}-container', 
+		'menu'            => '',
+		'container'       => 'div',
+		'container_class' => 'menu-{menu slug}-container',
 		'container_id'    => '',
-		'menu_class'      => 'menu', 
+		'menu_class'      => 'menu',
 		'menu_id'         => '',
 		'echo'            => true,
 		'fallback_cb'     => 'wp_page_menu',
@@ -241,10 +241,10 @@ function wpeSideNav() {
 //  Register WPE Navigation
 //  RU: Регистрация менюшек
 function register_html5_menu() {
-    register_nav_menus(array( 
-        'header-menu' => __('Меню в шапке', 'wpeasy'), 
-        'sidebar-menu' => __('Меню в сайдбар', 'wpeasy'), 
-        'footer-menu' => __('Меню в подвал', 'wpeasy') 
+    register_nav_menus(array(
+        'header-menu' => __('Меню в шапке', 'wpeasy'),
+        'sidebar-menu' => __('Меню в сайдбар', 'wpeasy'),
+        'footer-menu' => __('Меню в подвал', 'wpeasy')
     ));
 }
 //  If Dynamic Sidebar Existsов
@@ -285,6 +285,9 @@ function wpeExcerpt20($length) {
 }
 function wpeExcerpt40($length) {
     return 40;
+}
+function wpeExcerpt80($length) {
+    return 80;
 }
 //  Create the Custom Excerpts callback
 //  RU: Собственная обрезка контента
@@ -415,7 +418,7 @@ function html5blankcomments($comment, $args, $depth)
 {
 	$GLOBALS['comment'] = $comment;
 	extract($args, EXTR_SKIP);
-	
+
 	if ( 'div' == $args['style'] ) {
 		$tag = 'div';
 		$add_below = 'comment';
@@ -538,7 +541,7 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 
  // Как отключить комментарии для Медиафайлов WordPress
  // http://wordpresso.org/hacks/kak-otklyuchit-kommentarii-dlya-mediafaylov-wordpress/
- 
+
  function filter_media_comment_status( $open, $post_id ) {
 	$post = get_post( $post_id );
 	if( $post->post_type == 'attachment' ) {
@@ -550,7 +553,7 @@ add_filter( 'comments_open', 'filter_media_comment_status', 10 , 2 );
 
  // Редирект записи, когда поисковый запрос выдает один результат
  // http://wordpresso.org/hacks/29-wordpress-tryukov-dlya-rabotyi-s-zapisyami-i-stranitsami/
- 
+
 add_action('template_redirect', 'single_result');
 function single_result() {
 	if (is_search()) {
@@ -563,7 +566,7 @@ function single_result() {
 
 // хлебные крошки 	http://dimox.name/wordpress-breadcrumbs-without-a-plugin/
 // < ?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ? >
-// 
+//
 function dimox_breadcrumbs() {
 
 	/* === ОПЦИИ === */
@@ -716,7 +719,7 @@ Plugin URI: http://fortes.com/projects/wordpress/top-level-cats/
 Description: Removes the prefix from the URL for a category. For instance, if your old category link was <code>/category/catname</code> it will now be <code>/catname</code>
 Version: 1.0.1
 Author: Filipe Fortes
-Author URI: http://fortes.com/  
+Author URI: http://fortes.com/
 */
 
 // In case we're running standalone, for some odd reason
@@ -729,7 +732,7 @@ if (function_exists('add_action'))
 	add_filter('category_rewrite_rules', 'top_level_cats_category_rewrite_rules');
 	add_filter('generate_rewrite_rules', 'top_level_cats_generate_rewrite_rules');
 	add_filter('category_link', 'top_level_cats_category_link', 10, 2);
-	
+
 	global $clean_category_rewrites, $clean_rewrites;
 	$clean_category_rewrites = array();
 }
@@ -783,9 +786,9 @@ function top_level_cats_category_link($cat_link, $cat_id)
 function top_level_cats_remove_cat_base($link)
 {
 	$category_base = get_option('category_base');
-	
+
 	// WP uses "category/" as the default
-	if ($category_base == '') 
+	if ($category_base == '')
 		$category_base = 'category';
 
 	// Remove initial slash, if there is one (we remove the trailing slash in the regex replacement and don't want to end up short a slash)

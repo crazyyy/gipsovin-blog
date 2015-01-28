@@ -8,14 +8,14 @@
 			<a href="" class="arrow-next">Профиль для монтажа</a>
 		</aside>
 	</div><!-- full-width custom-article-home -->
-	
+
 	<!-- section -->
 	<section role="main" class="category-block">
 		<?php get_template_part('search-include'); ?>
 		<div class="loop-block clearfix">
-			
+
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-			
+
 			<!-- article -->
 			<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix looper'); ?>>
 
@@ -25,23 +25,31 @@
 				</h2>
 				<!-- /post title -->
 
-				<?php wpeExcerpt('wpeExcerpt40'); ?>
-				
+        <div class="first-block-display">
+          <?php wpeExcerpt('wpeExcerpt80'); ?>
+        </div>
+        <!-- /.first-block-display -->
+        <div class="first-block-disable">
+          <?php wpeExcerpt('wpeExcerpt40'); ?>
+        </div>
+        <!-- /.first-block-disable -->
+
 				<!-- post thumbnail -->
 				<span rel="nofollow" class="feature-img" title="<?php the_title(); ?>">
 					<?php if ( has_post_thumbnail()) :
-						the_post_thumbnail('medium');	
+						the_post_thumbnail('medium');
 					else: ?>
 					<img src="<?php echo catchFirstImage(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
 					<?php endif; ?>
 					<a href="<?php the_permalink(); ?>" class="show-more">Читать</a>
 				</span>
 				<!-- /post thumbnail -->
+
 				<span class="tags"><?php the_tags( '', ' ', '<br />' ); ?></span>
 				<span class="date"><?php the_time('d F Y'); ?></span>
 			</article>
 			<!-- /article -->
-			
+
 			<?php endwhile; else: ?>
 
 			<!-- article -->
@@ -55,8 +63,8 @@
 		</div>
 		<!-- /.loop-block -->
 
-<!-- 		<?php get_template_part('pagination'); ?> -->
-	
+    <?php get_template_part('pagination'); ?>
+
 	</section>
 	<!-- /section -->
 

@@ -47,11 +47,15 @@
                 <? } else { ?>
                     <a href="<?php echo home_url(); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/img/logo-color.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
-                    </a>          
+                    </a>
                 <?php } ?>
             </div><!-- logo -->
             <!-- /logo -->
-            <h1 class="site-title"><?php bloginfo( 'name' ); ?>гипсовиниловые панели</h1>
+            <?php if ( is_front_page() || is_home() ) { ?>
+            <h1 class="site-title">гипсовиниловые панели</h1>
+            <? } else { ?>
+            <h1 class="site-title"><a href="<?php echo home_url(); ?>">гипсовиниловые панели</a></h1>
+            <?php } ?>
 
             <a href="tel:+380968195263" class="phone phone-top">(096) 819-52-63</a>
             <a href="tel:+380633711909" class="phone phone-bottom">(063) 371-19-09</a>
