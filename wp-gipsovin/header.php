@@ -52,9 +52,9 @@
             </div><!-- logo -->
             <!-- /logo -->
             <?php if ( is_front_page() || is_home() ) { ?>
-            <h1 class="site-title">гипсовиниловые панели</h1>
+            <h1 class="site-title">гипсовиниловые панели и профиль</h1>
             <? } else { ?>
-            <h1 class="site-title"><a href="<?php echo home_url(); ?>">гипсовиниловые панели</a></h1>
+            <h1 class="site-title"><a href="<?php echo home_url(); ?>">гипсовиниловые панели и профиль</a></h1>
             <?php } ?>
 
             <a href="tel:+380968195263" class="phone phone-top">(096) 819-52-63</a>

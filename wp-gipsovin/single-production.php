@@ -21,7 +21,7 @@
 		<aside class="inner">
 			<h2>Каталог виниловых покрытий «Durafort»</h2>
 			<p>Ознакомьтесь со всей палитрой цветовых решений</p>
-			<a href="" class="pdf-dl">Скачать каталог</a>
+			<a href="" class="pdf-dl">Скачать PDF</a>
 		</aside>
 	</div><!-- full-width custom-article-product -->
 

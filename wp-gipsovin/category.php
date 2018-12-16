@@ -3,9 +3,9 @@
 	<h6 class="cat-title inner-title">Посление публикации</h6>
 	<div class="full-width custom-article-category">
 		<aside class="inner">
-			<h2>Какая-то рекламная фраза про гипсовинил</h2>
+			<h2>"Сухая" установка гипсовиниловых панелей</h2>
 			<p>избавляет от грязи в помещении и экономит время</p>
-			<a href="" class="arrow-next">Профиль для монтажа</a>
+			<a href="http://gipsovinil.com.ua/primery-oblitsovochnyh-rabot-s-ispolzovaniem-gipsovinila.htm" class="arrow-next">Примеры интерьеров</a>
 		</aside>
 	</div><!-- full-width custom-article-home -->
 
